@@ -116,6 +116,9 @@ ENV OPENSSL_DIR=/usr/local/musl/ \
 # libraries needed by the most popular and common Rust crates, to avoid
 # everybody needing to build them manually.)
 
+# Switch to nightly builds
+RUN rustup install nightly && rustup default nightly
+
 # Install some useful Rust tools from source. This will use the static linking
 # toolchain, but that should be OK.
 RUN cargo install -f cargo-audit && \
