@@ -3,7 +3,7 @@
 FROM ubuntu:16.04
 
 # The Rust toolchain to use when building our image.  Set by `hooks/build`.
-ARG TOOLCHAIN=stable
+ARG TOOLCHAIN=nightly
 
 # Make sure we have basic dev tools for building C libraries.  Our goal
 # here is to support the musl-libc builds and Cargo builds needed for a
